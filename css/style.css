@@ -37,13 +37,12 @@ li > a {
 }
 
 article {
-    border: 1px solid red;
-
     display: flex;
     flex-wrap: wrap;
 }
 
 article img {
+    display: block;
     width: 100%;
     margin-bottom: 24px;
 }
@@ -52,14 +51,13 @@ article h1 {
     font-size: 2.22em;
     font-weight: 800;
     line-height: 40px;
-    max-width: 350px;
     margin-bottom: 16px;
+    color: var(--very-dark-blue);
 }
 
 article p {
     font-size: 0.83em;
     line-height: 26px;
-    max-width: 345px;
     color: var(--dark-grayish-blue);
     margin-bottom: 24px;
 }
@@ -108,7 +106,6 @@ article p {
         padding: 0 32px;
         background-color: var(--off-white);
 
-        border-left: 1px solid var(--very-dark-blue);
         
         display: flex;
         flex-direction: column;
@@ -194,5 +191,10 @@ article p {
 
     li > a:hover {
         color: var(--soft-red);
+    }
+
+    article h1,
+    article p {
+        max-width: 350px;
     }
 }
