@@ -32,6 +32,12 @@ li > a {
     font-size: 0.83em;
 }
 
+article img {
+    width: 100%;
+}
+
+
+
 
 
 
@@ -135,14 +141,10 @@ li > a {
 
 }
 
-@media only screen and (min-width: 481px) and (max-width: 1440px) {
+@media only screen and (min-width: 481px) {
    
     .hamburger {
         display: none;
-    }
-
-    nav {
-        padding: 80px 165px;
     }
 
     nav li {
