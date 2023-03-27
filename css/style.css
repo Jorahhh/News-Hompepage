@@ -10,16 +10,15 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 main {
-    width: 100%;
     min-width: 310px;
     padding: 0 16px;
-
     display: flex;
     flex-wrap: wrap;
+    
 }
 
 nav {
@@ -29,6 +28,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 
@@ -36,10 +36,6 @@ li > a {
     font-size: 0.83em;
 }
 
-article {
-    display: flex;
-    flex-wrap: wrap;
-}
 
 article img {
     display: block;
@@ -50,11 +46,12 @@ article img {
 article h1 {
     font-size: 2.22em;
     font-weight: 800;
-    line-height: 40px;
+    line-height: 42px;
     margin-bottom: 16px;
     color: var(--very-dark-blue);
 }
 
+aside p,
 article p {
     font-size: 0.83em;
     line-height: 26px;
@@ -62,6 +59,62 @@ article p {
     margin-bottom: 24px;
 }
 
+aside p {
+    color: var(--grayish-blue);
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 92px;
+}
+
+
+.button {
+    background-color: var(--soft-red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 185px;
+    height: 48px;
+}
+
+.button a {
+    font-size: 0.77em;
+    font-weight: 800;
+    letter-spacing: 4.38px;
+    color: var(--off-white);
+}
+
+
+aside {
+    padding: 32px 24px;
+    background-color: var(--very-dark-blue);
+    display: flex;
+    flex-direction: column;
+}
+
+aside h2 {
+    font-size: 1.78em;
+    color: var(--soft-orange);
+    margin-bottom: 32px;
+}
+
+.new > h3 {
+    color: var(--off-white);
+    margin-bottom: 8px;
+    
+}
+
+.new {
+    margin-bottom: 32px;
+    border-bottom: 1px solid var(--dark-grayish-blue);
+}
+
+.new:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
 
 
 
@@ -71,7 +124,8 @@ article p {
 
 
 
-@media only screen and (max-width: 480px) {
+
+@media only screen and (max-width: 760px) {
     
     nav .logo {
         width: 46px;
@@ -102,7 +156,7 @@ article p {
         width: 70%;
         height: 100vh;
         top: 0;
-        right: -100%;
+        right: -70%;
         padding: 0 32px;
         background-color: var(--off-white);
 
@@ -112,6 +166,7 @@ article p {
         
         transition: all 0.3s ease-in-out;
         -webkit-transition: all 0.3s ease-in-out;
+        
         
     }
 
@@ -167,10 +222,16 @@ article p {
 
 }
 
-@media only screen and (min-width: 481px) {
+@media only screen and (min-width: 761px) {
    
     .hamburger {
         display: none;
+    }
+
+    main {
+        margin: 0 auto;
+        max-width: 1440px;
+        padding: 90px 165px;
     }
 
     nav li {
@@ -193,8 +254,18 @@ article p {
         color: var(--soft-red);
     }
 
+    article {
+        border: 1px solid red;
+        max-width: 730px;
+        justify-content: space-between;
+    }
+
     article h1,
     article p {
         max-width: 350px;
     }
+
+  
+
+
 }
