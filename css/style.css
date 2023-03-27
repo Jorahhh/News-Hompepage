@@ -90,7 +90,7 @@ aside {
     width: 100%;
 }
 
-aside h2 {
+.aside--heading {
     font-size: 1.78em;
     color: var(--soft-orange);
     margin-bottom: 32px;
@@ -103,12 +103,56 @@ aside h2 {
 
 .new {
     margin-bottom: 32px;
-    border-bottom: 1px solid var(--dark-grayish-blue);
+    border-bottom: 1px solid var(--dark-grayish-blue); 
 }
 
 .new:last-of-type {
     border: none;
     margin-bottom: 0;
+}
+
+.blog {
+    margin-top: 35px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blog--section {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog--section:last-of-type {
+    margin-bottom: 0;
+}
+
+.blog--image {
+    width: 100px;
+    margin-right: 6%;
+}
+
+.blog--heading {
+    font-size: 1.78em;
+    color: var(--grayish-blue);
+}
+
+.blog--title {
+    font-size: 1em;
+    color: var(--very-dark-blue);
+}
+
+.blog--titles {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blog--paragraph {
+    font-size: 0.83em;
+    line-height: 26px;
+    color: var(--dark-grayish-blue);
 }
 
 
