@@ -204,7 +204,7 @@ aside {
         height: 100vh;
         top: 0;
         right: -100%;
-        padding: 0 24px;
+        padding: 0 5%;
         background-color: var(--off-white);
 
         display: flex;
@@ -216,7 +216,7 @@ aside {
 
     .nav--menu.active {
         right: 0;
-        width: 70%;
+        width: 60%;
         z-index: 2;
     }
 
@@ -265,24 +265,30 @@ aside {
 
     /* ------------------------- */
     
-    @media only screen and (min-width: 768px) { /* Tablet Version */
+    @media only screen and (min-width: 700px) { /* Tablet Version */
         
+        nav .logo {
+            width: 54px;
+        }
+
         .hero h1 {
-            max-width: 350px;
+            max-width: 300px;
             font-size: 3.11em;
             line-height: 56px;
         }
         .info {
             max-width: 350px;
-            margin-left: 30px;
+            margin-left: 5%;
+        }
+
+        .nav--menu.active {
+            width: 40%;
         }
     }
 }
 
 
-
-
-@media only screen and (min-width: 1271px) {
+@media only screen and (min-width: 1271px) {  /* [Desktop Version] */
    
     .hamburger {
         display: none;
@@ -331,29 +337,41 @@ aside {
         max-height: 511px;
     }
 
+    .blog {
+        margin-top: 0;
+    }
+
     /* [Hover objects */
 
     li > a:hover {
         color: var(--soft-red);
+
+        transition: all 0.1s ease-in-out;
+        -webkit-transition: all 0.1s ease-in-out;
     }  
 
     .button:hover {
         cursor: pointer;
         background-color: var(--very-dark-blue);
+
+        transition: all 0.1s ease-in-out;
+        -webkit-transition: all 0.1s ease-in-out;
     }
 
     .new > h3:hover {
         cursor: pointer;
-        color: var(--soft-orange)
+        color: var(--soft-orange);
+
+        transition: all 0.1s ease-in-out;
+        -webkit-transition: all 0.1s ease-in-out;
     }
 
     .blog--title:hover {
         cursor: pointer;
         color: var(--soft-red);
-    }
 
-    .blog {
-        margin-top: 0;
+        transition: all 0.1s ease-in-out;
+        -webkit-transition: all 0.1s ease-in-out;
     }
 
 }
