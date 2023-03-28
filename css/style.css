@@ -13,11 +13,14 @@ body {
 }
 
 main {
+    margin: 0 auto;
     min-width: 310px;
-    padding: 8% 5%;
+    padding: 28px 16px;
+    width: 100%;
+
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    
 }
 
 nav {
@@ -114,12 +117,14 @@ aside {
 .blog {
     margin-top: 35px;
     width: 100%;
+
     display: flex;
     flex-wrap: wrap;
+    gap: 32px;
 }
 
 .blog--section {
-    margin-bottom: 32px;
+
     display: flex;
     justify-content: space-between;
 }
@@ -144,6 +149,7 @@ aside {
 }
 
 .blog--titles {
+    max-width: 230px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -164,11 +170,12 @@ aside {
 
 
 
-@media only screen and (max-width: 1045px) {
+@media only screen and (max-width: 1270px) {
     
+
     main {
-        margin: 0 auto;
-        max-width: 960px;   
+        max-width: 768px;
+        
     }
     nav .logo {
         width: 46px;
@@ -180,6 +187,7 @@ aside {
         background: rgba(0,0,0,0.5); 
         transition: all 0.4s ease-in-out;
         -webkit-transition: all 0.4s ease-in-out;
+        z-index: 1;
       }
 
 
@@ -188,6 +196,7 @@ aside {
     .hamburger {
         position: relative;
         cursor: pointer;
+        z-index: 3;
     }
 
     .nav--menu {
@@ -195,7 +204,7 @@ aside {
         height: 100vh;
         top: 0;
         right: -100%;
-        padding: 0 10%;
+        padding: 0 24px;
         background-color: var(--off-white);
 
         display: flex;
@@ -203,12 +212,12 @@ aside {
         
         transition: all 0.3s ease-in-out;
         -webkit-transition: all 0.3s ease-in-out;  
-        
     }
 
     .nav--menu.active {
         right: 0;
         width: 70%;
+        z-index: 2;
     }
 
     .menu {
@@ -255,19 +264,34 @@ aside {
     }
 
     /* ------------------------- */
-
-
+    
+    @media only screen and (min-width: 768px) { /* Tablet Version */
+        
+        .hero h1 {
+            max-width: 350px;
+            font-size: 3.11em;
+            line-height: 56px;
+        }
+        .info {
+            max-width: 350px;
+            margin-left: 30px;
+        }
+    }
 }
 
-@media only screen and (min-width: 1046px) {
+
+
+
+@media only screen and (min-width: 1271px) {
    
     .hamburger {
         display: none;
     }
 
     main {
-        max-width: 1440px;
-        padding: 90px 165px;
+        margin: 0 auto;
+        max-width: 1270px;
+        padding: 80px 80px;
     }
 
     nav li {
@@ -286,9 +310,50 @@ aside {
         -webkit-transition: all 0.1s ease-in-out;
     }
 
+    .hero {
+        width: 730px;
+    }
+
+    .hero h1 {
+        font-size: 3.11em;
+        line-height: 56px;
+        max-width: 350px;
+    }
+
+    .info {
+        max-width: 350px;
+    }
+
+
+    aside {
+        max-width: 350px;
+        margin-left: 30px;
+        max-height: 511px;
+    }
+
+    /* [Hover objects */
+
     li > a:hover {
         color: var(--soft-red);
     }  
 
+    .button:hover {
+        cursor: pointer;
+        background-color: var(--very-dark-blue);
+    }
+
+    .new > h3:hover {
+        cursor: pointer;
+        color: var(--soft-orange)
+    }
+
+    .blog--title:hover {
+        cursor: pointer;
+        color: var(--soft-red);
+    }
+
+    .blog {
+        margin-top: 0;
+    }
 
 }
