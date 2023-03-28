@@ -282,6 +282,11 @@ aside {
             width: 40%;
         }
 
+        li > a {
+            color: var(--very-dark-blue);
+            font-size: 1.2em;
+        }
+
         .hero {
             display: flex;
             justify-content: space-between;
