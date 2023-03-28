@@ -1,7 +1,6 @@
 const hamburger = document.getElementById('hamburger');
-const lines = document.querySelectorAll('.line');
+const lines = document.querySelectorAll('.hamburger--line');
 const navMenu = document.getElementById('nav--menu');
-const menu = document.getElementById('menu');
 const backdrop = document.getElementById('backdrop')
 
 
